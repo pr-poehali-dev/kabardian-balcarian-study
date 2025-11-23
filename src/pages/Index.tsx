@@ -20,14 +20,20 @@ const Index = () => {
     {
       name: 'Сосруко',
       nameKab: 'Сосрыкъуэ',
-      image: 'https://cdn.poehali.dev/projects/8440f4e0-b31d-4d11-90d3-dd206c5789cd/files/f8160b29-62ec-4150-b5a1-878095ba4dc3.jpg',
-      description: 'Отважный герой-воин с магическими стальными руками',
+      image: 'https://cdn.poehali.dev/projects/8440f4e0-b31d-4d11-90d3-dd206c5789cd/files/a5ae9d52-0297-455b-9b70-537349d13ff3.jpg',
+      description: 'Легендарный кабардинский богатырь, рождённый из камня',
+      origin: 'Рождён из камня, оплодотворённого пастухом. Стальные руки выкованы кузнецом Курдалагоном',
+      abilities: 'Магические стальные руки, невероятная сила и храбрость',
+      role: 'Главный герой множества приключений и подвигов во всех вариациях нартских сказаний',
     },
     {
       name: 'Сатаней',
       nameKab: 'Сэтэнай',
-      image: 'https://cdn.poehali.dev/projects/8440f4e0-b31d-4d11-90d3-dd206c5789cd/files/75c34e7d-ce59-4bae-8c24-2e1820f45e96.jpg',
-      description: 'Мудрая мать нартов, хранительница знаний',
+      image: 'https://cdn.poehali.dev/projects/8440f4e0-b31d-4d11-90d3-dd206c5789cd/files/70a2ab00-68a4-4fe4-94d2-c34fcb7236c1.jpg',
+      description: 'Прекрасная и мудрая мать нартов в кабардинском костюме',
+      origin: 'Мать нартского народа, обладающая великой мудростью и магическими способностями',
+      abilities: 'Мудрость веков, знание магии и целительства, хранительница традиций',
+      role: 'Мать нартов, советница и хранительница традиций народа',
     },
   ];
 
@@ -340,13 +346,20 @@ const Index = () => {
                       
                       <div className="space-y-4">
                         <div className="flex items-start space-x-3">
+                          <Icon name="Sparkle" className="h-6 w-6 text-secondary mt-1" />
+                          <div>
+                            <h4 className="font-semibold text-primary">Происхождение</h4>
+                            <p className="text-muted-foreground">
+                              {hero.origin}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex items-start space-x-3">
                           <Icon name="Sword" className="h-6 w-6 text-secondary mt-1" />
                           <div>
                             <h4 className="font-semibold text-primary">Особые способности</h4>
                             <p className="text-muted-foreground">
-                              {index === 0 
-                                ? 'Магические стальные руки, невероятная сила и храбрость'
-                                : 'Мудрость веков, знание магии и целительства'}
+                              {hero.abilities}
                             </p>
                           </div>
                         </div>
@@ -355,9 +368,7 @@ const Index = () => {
                           <div>
                             <h4 className="font-semibold text-primary">Роль в эпосе</h4>
                             <p className="text-muted-foreground">
-                              {index === 0 
-                                ? 'Главный герой множества приключений и подвигов'
-                                : 'Мать нартов, советница и хранительница традиций'}
+                              {hero.role}
                             </p>
                           </div>
                         </div>
